@@ -1,0 +1,42 @@
+Pearl_Learning
+==============
+
+  1 #!/usr/bin/env perl 
+  2 use strict;
+  3 use warnings;
+  4 use feature ':5.12';
+  5 
+  6 use Data::Dumper;
+  7 
+  8 my %family1 = (
+  9      'mom'=>'mom1',
+ 10      'pop'=>'pop1',
+ 11      'vehicles' => ['car','cycle'],
+ 12 );
+ 13 
+ 14 my %family2 = (
+ 15      'mom'=>'mom2',
+ 16      'pop'=>'pop2',
+ 17      'vehicles' => ['bus','van'],
+ 18 );
+ 19 
+ 20 my $all = {
+ 21     allfam => [\%family1, \%family2]};
+ 22 
+ 23 my $count = 1;
+ 24 foreach my $family ( @{$all->{allfam}} ) {
+ 25 
+ 26       say "family $count ";
+ 27       say Dumper($family);
+ 28       foreach my $keys ( keys %{$family} ) {
+ 29                 if(!ref($family->{$keys}))
+ 30                 {
+ 31                         $family->{$family->{$keys}}=$keys;
+ 32                         delete $family->{$keys};
+ 33                 }
+ 34         }
+ 35         say Dumper($family);
+ 36 }
+ 37 
+~                                                                                                                                
+:set nu                                                                                                        1,1           All
