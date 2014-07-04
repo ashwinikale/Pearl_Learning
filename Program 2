@@ -1,0 +1,39 @@
+  1 #!/usr/bin/perl
+  2 
+  3 use strict;
+  4 use warnings;
+  5 use feature ':5.12';
+  6 
+  7 use Data::Dumper;
+  8 
+  9 
+ 10 for(my $i = 1 ; $i <= 30 ; ++$i)
+ 11 {
+ 12         if( ($i%3 eq 0) && ($i%5 eq 0) )
+ 13         {
+ 14                 say  "FizzBuzz $i";
+ 15         }
+ 16         elsif (($i%3) eq 0 )
+ 17         {
+ 18                 say  "Fizz $i";
+ 19         }
+ 20         elsif (($i%5) eq 0 )
+ 21         {
+ 22                 say "Buzz $i";
+ 23         }
+ 24         else
+ 25         {
+ 26                 say $i;
+ 27         }
+ 28 }
+ 29 
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+~                                                                                                                                
+:set nu                                                                                                        29,1-8        All
